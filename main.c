@@ -6,6 +6,7 @@
  * @argv: the array of argument strings:
  * Return: EXIT_SUCCESS, else EXIT_FAILURE on failure
  */
+var_t var;
 
 int main(int argc, char *argv[])
 {

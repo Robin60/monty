@@ -30,6 +30,7 @@ void mo_push(stack_t **stack, unsigned int line_number)
 {
 	char *str;
 	int n;
+	int len = var.len;
 
 	str = strtok(NULL, "\n\t\r ");
 	if (str == NULL || check_digit(str))
@@ -43,5 +44,6 @@ void mo_push(stack_t **stack, unsigned int line_number)
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	var.len++;
+	len++;
+	var.len = len;
 }
